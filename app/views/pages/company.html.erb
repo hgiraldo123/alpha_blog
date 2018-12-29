@@ -1,0 +1,132 @@
+<h> This is a test page</h>  
+  
+  <body>
+  .row
+      .col-md-4
+        .form-group
+          %label
+            Whitelabel Icon
+            %small (300x300 .jpg or .png)
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.whitelabel_icon_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Image"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "max-width: 200px; max-height: 150px;"}
+              %img.valign-middle{:src => @company.whitelabel_icon_url ?  @company.whitelabel_icon_url + '?' + @company.updated_at.to_i.to_s : nil, :style => "max-width: 200px; max-height: 150px;"}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select image
+                %span.fileinput-exists Change
+                %input{:name => "company[whitelabel_icon]", :type => "file", 'data-filetype' => 'image'}/
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+      .col-md-4
+        .form-group
+          %label
+            Watermark Image
+            %small (720x720 transparent .png)
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.watermark_image_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Image"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img.valign-middle{:src => @company.watermark_image_url ? @company.watermark_image_url + '?' + @company.updated_at.to_i.to_s : nil, :style => "max-width: 200px; max-height: 150px;"}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select image
+                %span.fileinput-exists Change
+                %input{:name => "company[watermark_image]", :type => "file", 'data-filetype' => 'image'}/
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+      .col-md-4
+        .form-group
+          %label
+            Header Image
+            %small (720x720 .jpg or .png))
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.header_image_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Image"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "width: 200px; height: 150px;"}
+              %img.valign-middle{:src => @company.header_image_url ? @company.header_image_url + '?' +  @company.updated_at.to_i.to_s : nil, :style => "max-width: 200px; max-height: 150px;"}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select image
+                %span.fileinput-exists Change
+                %input{:name => "company[header_image]", :type => "file", 'data-filetype' => 'image'}/
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+    .row
+      .col-md-4
+        .form-group
+          %label
+            Footer Image
+            %small (720x720 .jpg or .png)
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.footer_image_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Image"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "max-width: 200px; max-height: 150px;"}
+              %img.valign-middle{:src => @company.footer_image_url ? @company.footer_image_url + '?' +  @company.updated_at.to_i.to_s : nil, :style => "max-width: 200px; max-height: 150px;"}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select image
+                %span.fileinput-exists Change
+                %input{:name => "company[footer_image]", :type => "file", 'data-filetype' => 'image'}/
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+      .col-md-4
+        .form-group
+          %label
+            Company Logo
+            %small (300x100 .jpg or .png)
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.company_logo_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Image"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "max-width: 200px; max-height: 150px;"}
+              %img.valign-middle{:src => @company.company_logo_url ? @company.company_logo_url + '?' + @company.updated_at.to_i.to_s : nil, :style => "max-width: 200px; max-height: 150px;"}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select image
+                %span.fileinput-exists Change
+                %input{:name => "company[company_logo]", :type => "file", 'data-filetype' => 'image'}/
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+    .row
+      .col-md-4
+        .form-group
+          %label
+            Header Video
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.header_video_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Video"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "max-width: 260px; max-height: 150px;"}
+              %video.valign-middle{:src => @company.header_video_url ? @company.header_video_url : nil, :style => "max-width: 250px; max-height: 150px;", controls: true}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select Video
+                %span.fileinput-exists Change
+                %input.file{name: 'company[header_video]', type: 'file', 'data-filetype' => 'video'}
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+
+      .col-md-4
+        .form-group
+          %label
+            Footer Video
+          %br
+          .fileinput{"data-provides" => "fileinput", "class" => @company.footer_video_url ? "fileinput-exists" : "fileinput-new"}
+            .fileinput-new.thumbnail{:style => "width: 250px; height: 150px;"}
+              %img{:alt => "...", "data-src" => "holder.js/100%x100%/text:Upload Video"}/
+            .fileinput-preview.fileinput-exists.thumbnail{:style => "max-width: 260px; max-height: 150px;"}
+              %video.valign-middle{:src => @company.footer_video_url ? @company.footer_video_url : nil, :style => "max-width: 250px; max-height: 150px;", controls: true}
+            %div
+              %span.btn.btn-default.btn-file
+                %span.fileinput-new Select Video
+                %span.fileinput-exists Change
+                %input.file{name: 'company[footer_video]', type: 'file', 'data-filetype' => 'video'}
+              %a.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Remove
+              
+  </body>
+  
